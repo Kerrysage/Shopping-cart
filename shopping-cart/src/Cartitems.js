@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CartItem from './CartItem';
+
 const CartItems = (props) => {
     return (
         <div className="container">
@@ -11,11 +12,11 @@ const CartItems = (props) => {
                         <div className="col-md-2">Price</div>
                         <div className="col-md-2">Quantity</div>
                     </div>
+                    <CartItem key={props.cartItemsList.id} cartItemsList={props.cartItemsList}/>
                 </div>
-                <CartItem cart={props.cartItemsList}/>
             </div>
         </div>
-
+                
     )
 }
 

@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 const CartItem = (props) => {
-    return props.cart.map(item => {
+    return props.cartItemsList.map(item => {
             return (
                 <div className="list-group-item">
                     <div className="row">
