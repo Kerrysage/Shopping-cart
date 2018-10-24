@@ -25,18 +25,21 @@ class AddItem extends Component {
 
     render () {
         return (
-            <div>
+            <div className="container">
+            <div className="list-group">
+                <div>
+                    <p>Quantity</p>
+                </div>
                 <form>
-                    <label>Quantity: <input type="text" onChange={(e) => this.setState({Quantity: e.target.value}) } id="quantity" />
-                    </label>
-                    <input></input>
-                    <label>Products: <input type="text" onChange={(e) => this.setState({Products: e.target.value}) } id="product" />
-                    </label>
-                    <select ref="dropDown" onChange={this.selectChanged}>
+                    {/* <label>Quantity</label> */}
+                    <input type="number" min="0" className="col-md-12" />
+                    <label>Products</label>
+                    <select className="container" ref="dropDown" onChange={this.selectChanged}>
                         {this.renderOptions()}
                     </select>
                     <button onClick = {this.itemAdder}>Submit</button>
                 </form>
+            </div>
             </div>
         )
     }

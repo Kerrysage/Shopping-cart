@@ -13,7 +13,9 @@ class App extends Component {
       { id: 1, product: { id: 40, name: 'Mediocre Iron Watch', priceInCents: 399 }, quantity: 1 },
       { id: 2, product: { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 }, quantity: 2 },
       { id: 3, product: { id: 42, name: 'Intelligent Paper Knife', priceInCents: 1999 }, quantity: 1 },
-    ],
+
+    ], 
+
     AddItemList:[
       { id: 40, name: 'Mediocre Iron Watch', priceInCents: 399 },
       { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 },
@@ -28,7 +30,7 @@ class App extends Component {
   }}
   render() {
     return (
-      <div className="App">
+      <div >
         <Header />
         <CartItems cartItemsList={this.state.cartItemsList}/>
         <AddItems AddItemList={this.state.AddItemList}/> 
