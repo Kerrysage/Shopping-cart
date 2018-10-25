@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class AddItem extends Component {
-
     renderOptions = () => {
         return this.props.AddItemList.map((product) => {
             return <option key={product.id}> {product.name}</option>
@@ -23,24 +22,32 @@ class AddItem extends Component {
         console.log(productAttributes)
     }
 
+    componentDidMount(){
+        console.log("chris added this",this.props.AddItemList)
+    }
+
     render () {
         return (
-            <div className="container">
-            <div className="list-group">
-                <div>
-                    <p>Quantity</p>
-                </div>
-                <form>
-                    {/* <label>Quantity</label> */}
-                    <input type="number" min="0" className="col-md-12" />
-                    <label>Products</label>
-                    <select className="container" ref="dropDown" onChange={this.selectChanged}>
-                        {this.renderOptions()}
+            <form className="container">
+                <div className="list-group">
+                    <div>
+                        <p>Quantity</p>
+                    </div>
+                    <input onChange={this.props.modQuantity} input type="number" min="0" className="col-md-12" />
+                    <div>
+                        <label>Products</label>
+                    </div>
+                    <select onChange={this.props.modProduct} className="container">
+                        <option defaultValue="Select an Option" selected>Select an Option </option>
+                        {this.props.AddItemList.map(item => {
+                            return <option prodID={item.id} price={item.priceInCents} value={item.name}>{item.name} </option>
+                            })}
                     </select>
-                    <button onClick = {this.itemAdder}>Submit</button>
-                </form>
-            </div>
-            </div>
+                    <div className="sep">
+                        <button onClick = {this.props.modify} type="button" className="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+             </form>
         )
     }
 }
