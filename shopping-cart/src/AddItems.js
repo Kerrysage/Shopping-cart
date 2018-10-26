@@ -47,7 +47,7 @@ class AddItem extends Component {
                         <button onClick = {this.props.modify} type="button" className="btn btn-primary">Submit</button>
                     </div>
                 </div>
-             </form>
+            </form>
         )
     }
 }
