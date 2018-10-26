@@ -43,7 +43,7 @@ class AddItem extends Component {
                             return <option prodID={item.id} price={item.priceInCents} value={item.name}>{item.name} </option>
                             })}
                     </select>
-                    <div className="sep">
+                    <div className="space">
                         <button onClick = {this.props.modify} type="button" className="btn btn-primary">Submit</button>
                     </div>
                 </div>

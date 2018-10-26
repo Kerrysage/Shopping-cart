@@ -151,7 +151,7 @@ class App extends Component {
         <Header />
         <CartItems cartItemsList={this.state.cartItemsList} total={this.total}/> 
         <AddItems AddItemList={this.state.AddItemList} modify={this.modify} modQuantity={this.modQuantity} modProduct={this.modProduct}/> 
-        <h2>Grand Total: {grandTotal /100} </h2> 
+        <h3>Grand Total: {grandTotal /100} </h3> 
         <Footer list = "2018" />
       </div>
     )
