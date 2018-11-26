@@ -11,19 +11,15 @@ class AddItem extends Component {
         e.preventDefault();
         let selected = "";
         selected = e.target.options[e.target.selectedIndex].text;
-        console.log("selected is ", selected);
     }
 
     itemAdder = (e) => {
         e.preventDefault();
-        console.log("this.refs is ",this.refs); 
 
         let productAttributes = this.props.AddItemList.filter(product => product.name === this.refs.dropDown.value)
-        console.log(productAttributes)
     }
 
     componentDidMount(){
-        console.log("chris added this",this.props.AddItemList)
     }
 
     render () {

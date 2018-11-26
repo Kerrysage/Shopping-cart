@@ -4,7 +4,6 @@ import React from 'react'
 class CartItem extends React.Component {
 
   render() {
-    console.log(this.props)
     return (
       <div className="list-group-item">
         <div className="row">

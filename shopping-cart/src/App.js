@@ -96,7 +96,6 @@ class App extends Component {
   modProduct = (e) => {
     e.preventDefault()
     for (let i = 0; i < e.target.length; i++) {
-      console.log(e.target[i].attributes.price)
       if (e.target.value === e.target[i].value) {
         let productID = e.target[i].attributes.prodID.value
         let price = e.target[i].attributes.price.value
@@ -108,7 +107,6 @@ class App extends Component {
         })
       }
     }
-    console.log(this.state)
   }
 
   modQuantity = (e) => {
